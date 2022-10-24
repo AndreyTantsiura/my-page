@@ -1,25 +1,27 @@
-export const main = {
-  display: 'flex',
-  margin: '5em',
-  fontSize: '25px',
-  justifyContent: 'center',
-  flexDirection: 'column',
-  minHeight: '100%',
-}
+import styled from 'styled-components'
 
-export const block = {
-  display: 'flex',
-  justifyContent: 'center',
-}
+export const Wrap = styled.div`
+  display: flex;
+  margin: 5em;
+  font-size: 25px;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100%;
+`
 
-export const title = {
-  width: '100%',
-  textAlign: 'right',
-  marginRight: '10px',
-  opacity: '0.5',
-}
+export const Block = styled.div`
+  display: flex;
+  justify-content: center;
+`
 
-export const text = {
-  width: '100%',
-  textAlign: 'left',
-}
+export const Title = styled.div`
+  width: 100%;
+  text-align: right;
+  margin-right: 10px;
+  opacity: 0.5;
+`
+
+export const Text = styled.div`
+  width: 100%;
+  text-align: left;
+`
