@@ -1,6 +1,6 @@
 import { Button } from '@mui/material'
 import { useTimer } from '../../hooks/useTimer'
-import { btn, timer } from './style'
+import { TimerStyled } from './style'
 import { observer } from 'mobx-react-lite'
 
 export const Timer: React.FC = observer(() => {
@@ -12,14 +12,22 @@ export const Timer: React.FC = observer(() => {
   return (
     <div>
       <h2>Timer {state.started ? 'on' : 'off'}</h2>
-      <div style={timer}>
+      <TimerStyled>
         <span>{elapsedViewModel}</span>
-      </div>
+      </TimerStyled>
       <div>
-        <Button variant="outlined" style={btn} onClick={startTimer}>
+        <Button
+          variant="outlined"
+          style={{ color: '#616161', borderColor: '#616161', margin: '1em' }}
+          onClick={startTimer}
+        >
           Start
         </Button>
-        <Button variant="outlined" style={btn} onClick={stopTimer}>
+        <Button
+          variant="outlined"
+          style={{ color: '#616161', borderColor: '#616161', margin: '1em' }}
+          onClick={stopTimer}
+        >
           Stop
         </Button>
       </div>
